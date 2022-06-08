@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .6s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.main-form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.form-input {
+  border-width: 0 0 2px;
+  border-color: rgb(93, 0, 232);
+  padding: 5px 80px 5px 5px;
+  margin-top: 55px;
+  transition: all .6s ease-in-out;
+}
+
+
+.form-input.dark {
+  background: #222;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-input.dark::placeholder {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-input:first-of-type {
+  margin-top: 105px;
+}
+
+.form-container button {
+  padding: 13px 25px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+
+.form-container button:hover {
+  transform: scale(1.1);
+  opacity: .7;
+}
+
+.form-header {
+  transform: translateX(30%);
+  transition: all .6s ease-in-out;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.password-icon {
+  position: absolute;
+  top: 64%;
+  left: 32%;
+  cursor: pointer;
+}
+
+.confirm-password-icon {
+  position: absolute;
+  top: 77%;
+  left: 32%;
+  cursor: pointer;
+}
+
+.bulb-icon {
+  position: absolute;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  right: 5%;
+  top: 5%;
+}
+
+.error-message {
+  color: red;
+  font-size: 10px;
+  margin-left: -28%;
+  margin-top: 5px;
+}
+
+.error-message-password {
+  color: red;
+  font-size: 10px;
+  width: 250px;
+  margin-top: 5px;
+}
+
+.error-message-confirm {
+  color: red;
+  font-size: 10px;
+  width: 250px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1250px) {
+  .image-container {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-header {
+    left: 50%;
+    right: 50%;
+    margin: auto;
+    transform: translate(65%, -50%);
+  }
+
+  .form-container input {
+    margin-top: 50px;
+  }
+
+  .password-icon {
+    top: 64%;
+    left: 58%;
+  }
+
+  .confirm-password-icon {
+    top: 79.5%;
+    left: 58%;
+  }
+}
+
+.background-form-illustration {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 400px) {
+  .form-header {
+    margin-left: -105px;
+    font-size: 21px !important;
+  }
+
+  .password-icon {
+    top: 64%;
+    left: 75%;
+  }
+
+  .confirm-password-icon {
+    top: 80%;
+    left: 75%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-header {
+    margin-left: -105px;
+    font-size: 21px !important;
+  }
+
+  .password-icon {
+    top: 64%;
+    left: 75%;
+  }
+
+  .confirm-password-icon {
+    top: 80%;
+    left: 75%;
+  }
+
+  .bulb-icon {
+    top: 3%;
+    right: 11%;
   }
 }
